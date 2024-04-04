@@ -1,3 +1,8 @@
+
+
+mt19937 rng((uint32_t)chrono::steady_clock::now().time_since_epoch().count());
+
+
 struct Hashing{
 
     int base1, base2, mod1, mod2;
@@ -68,8 +73,8 @@ struct Hashing{
 
     Hashing(string & s)
     {
-        base1 = 30;
-        base2 = 33;
+        base1 = uniform_int_distribution<ll>(30,  50)(rng);
+        base2 = uniform_int_distribution<ll>(51,  70)(rng);
         mod1 = 1e9 + 7;
         mod2 = 1e9 + 9;
 
