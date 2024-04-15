@@ -57,7 +57,6 @@ struct edge
     int u, v, cost;
 };
 
-vector<edge>edges;
 
 pair<vector<pair<int, int>>, int> MST(vector<edge> & edges, int n) // nodes
 {
