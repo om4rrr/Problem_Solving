@@ -17,6 +17,7 @@ void add(int x)
 void del(int x)
 {
     // write here the logic you want to happen if you remove an element from the range
+}
 
 void MO()
 {
