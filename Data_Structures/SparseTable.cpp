@@ -22,7 +22,7 @@ void build(vector<int> &v) {
     }
 }
 
-int query(int l, int r) { // 1-indexed
+int query(int l, int r) { // 0-indexed
     int ans = ign;
     int len = r - l + 1;
     for (int msk = 0; l <= r; ++msk) {
@@ -34,7 +34,7 @@ int query(int l, int r) { // 1-indexed
     return ans;
 }
 
-int queryOverlap(int l, int r) { // 1-indexed
+int queryOverlap(int l, int r) { // 0-indexed
     int msk = __lg(r - l + 1);
     return merge(
             sparseTable[msk][l],
